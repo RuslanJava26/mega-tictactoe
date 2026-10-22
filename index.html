@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGA-TICTACTOE $$$</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+                .container {
+            width: 90%;
+            max-width: 400px;
+            background-color: #1e1e1e;
+
+            /* МЕНЯЕМ ОТСТУПЫ, ЧТОБЫ ВСЁ ПОДНЯЛОСЬ ВЫШЕ: */
+            padding: 10px 25px;
+
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        h1 {
+            color: #ffd700;
+            margin-bottom: 5px;
+            font-size: 26px;
+            text-shadow: 0 0 10px rgba(255,215,0,0.3);
+        }
+        #balance {
+            font-size: 22px;
+            color: #00ffcc;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 0 0 8px rgba(0,255,204,0.3);
+        }
+                #status {
+            font-size: 14px;
+            color: #00bcd4;
+            min-height: 25px; /* Уменьшили высоту блока статуса с 40px до 25px */
+            margin-bottom: 10px; /* Уменьшили отступ под статусом с 15px до 10px */
+            font-weight: 500;
+        }
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-bottom: 15px; /* Уменьшили отступ под полем с 25px до 15px */
+
+            /* ДЕЛАЕМ САМО ПОЛЕ ЧУТЬ КОМПАКТНЕЕ: */
+            width: 48vmin; /* Было 55vmin */
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cell {
+            background-color: #2a2a2a;
+            border: 2px solid #3d3d3d;
+            color: #ffffff;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            /* ПОДГОНЯЕМ РАЗМЕР КЛЕТОК ПОД НОВОЕ ПОЛЕ: */
+            height: 15vmin; /* Было 17vmin */
+            font-size: 9vmin; /* Было 10vmin */
+        }
+
+
+        .cell:hover {
+            background-color: #3a3a3a;
+            border-color: #ffd700;
+        }
+        .shop-title {
+            color: #da70d6;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #da70d6;
+            padding-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        .shop-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .shop-btn {
+            border: none;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        .shop-btn:active {
+            transform: scale(0.95);
+        }
+        #shield-btn { background-color: #2e8b57; box-shadow: 0 4px 10px rgba(46,139,87,0.3); }
+        #scanner-btn { background-color: #4682b4; box-shadow: 0 4px 10px rgba(70,130,180,0.3); }
+        .shop-btn:disabled {
+            background-color: #444444;
+            color: #888888;
+            box-shadow: none;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>MEGA-TICTACTOE $$$</h1>
+    <div id="balance">💰 Твой баланс: 3.37$</div>
+    <button id="modeBtn" onclick="toggleGameMode()" style="padding: 10px 20px; font-size: 16px; margin-bottom: 15px; cursor: pointer; background-color: #2e8b57; color: white; border: none; border-radius: 5px; font-weight: bold;">🤖 Режим: Против ИИ</button>
+    <div id="status">✈️ Самолёт летит...</div>
+
+    <div class="board" id="board">
+        <button class="cell" onclick="makeMove(0,0)"></button>
+        <button class="cell" onclick="makeMove(0,1)"></button>
+        <button class="cell" onclick="makeMove(0,2)"></button>
+        <button class="cell" onclick="makeMove(1,0)"></button>
+        <button class="cell" onclick="makeMove(1,1)"></button>
+        <button class="cell" onclick="makeMove(1,2)"></button>
+        <button class="cell" onclick="makeMove(2,0)"></button>
+        <button class="cell" onclick="makeMove(2,1)"></button>
+        <button class="cell" onclick="makeMove(2,2)"></button>
+    </div>
+
+    <div class="shop-title">🛒 МАГАЗИН ДОП. ОПЦИЙ</div>
+    <div class="shop-buttons">
+        <button id="shield-btn" class="shop-btn" onclick="buyShield()">🛡️ Щит (0.50$)</button>
+        <button id="scanner-btn" class="shop-btn" onclick="buyScanner()">🚩 Сканер (0.30$)</button>
+    </div>
+</div>
+<script>
+    let balance = 3.37;
+    let board = [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']];
+    let bombBoard = [[false, false, false], [false, false, false], [false, false, false]];
+    let hasShield = false;
+    let bombRow, bombCol;
+    let gameOver = false;
+
+        function startNewRound() {
+        for(let i=0; i<3; i++) {
+            for(let j=0; j<3; j++) bombBoard[i][j] = false;
+        }
+        bombRow = Math.floor(Math.random() * 3);
+        bombCol = Math.floor(Math.random() * 3);
+        bombBoard[bombRow][bombCol] = true;
+
+        const status = document.getElementById('status');
+        /* ТЕПЕРЬ СТРОКИ БУДУТ НАЗЫВАТЬСЯ 1, 2, 3 вместо 0, 1, 2: */
+        status.innerText = `✈️ ВЖУХ! Самолёт скинул мину в строку №${bombRow + 1}!`;
+        status.style.color = '#00bcd4';
+        document.getElementById('shield-btn').disabled = false;
+        document.getElementById('scanner-btn').disabled = false;
+    }
+
+
+    function updateBalance() {
+        document.getElementById('balance').innerText = `💰 Твой баланс: ${balance.toFixed(2)}$`;
+    }
+
+    function buyShield() {
+        if (balance >= 0.50) {
+            balance -= 0.50;
+            hasShield = true;
+            updateBalance();
+            document.getElementById('status').innerText = "🛡️ Укрытие активировано на этот ход!";
+            document.getElementById('status').style.color = "#2e8b57";
+            document.getElementById('shield-btn').disabled = true;
+        } else {
+            alert("❌ Недостаточно средств для щита!");
+        }
+    }
+
+let isBotMode = true;
+let currentPlayer = 'X';
+function toggleGameMode() {
+    isBotMode = !isBotMode; // переключает режим
+    const btn = document.getElementById("modeBtn");
+
+    if (isBotMode) {
+        btn.innerText = "🤖 Режим: Против ИИ";
+        btn.style.backgroundColor = "#2e8b57";
+    } else {
+        btn.innerText = "👥 Режим: Вдвоем";
+        btn.style.backgroundColor = "#ff4436";
+    }
+
+    resetGame(); // перезапуск поля при смене режима
+}
+
+
+    function buyScanner() {
+        if (balance >= 0.30) {
+            balance -= 0.30;
+            updateBalance();
+            document.getElementById('status').innerText = `🚩 РАЗВЕДКА: Бомба в строке №${bombRow}, столбце №${bombCol}!`;
+            document.getElementById('status').style.color = "#ff9800";
+            document.getElementById('scanner-btn').disabled = true;
+        } else {
+            alert("❌ Недостаточно средств для сканера!");
+        }
+    }
+
+            function makeMove(row, col) {
+        if (board[row][col] !== '.' || gameOver) return;
+
+        let index = row * 3 + col;
+        let cellBtn = document.getElementsByClassName('cell')[index];
+
+        if (bombBoard[row][col]) {
+            if (hasShield) {
+                alert("🛡️ БУУУМ! Щит поглотил взрыв мины! Вы спасены!");
+                hasShield = false;
+                document.getElementById('shield-btn').disabled = false;
+                board[row][col] = currentPlayer;
+                cellBtn.innerText = currentPlayer;
+                cellBtn.style.color = (currentPlayer === 'X') ? '#2e8b57' : '#ff4436';
+            } else {
+                cellBtn.innerText = '💥';
+                cellBtn.style.backgroundColor = '#f44336';
+
+                balance = Math.max(0, balance - 0.50);
+                updateBalance();
+
+                setTimeout(() => {
+                    alert("БА-БАХ! 💥 Вы подорвались на авиабомбе!\nШтраф: -0.50$. Раунд перезапускается!");
+                    currentPlayer = 'X';
+                    resetGame();
+                }, 100);
+                return;
+            }
+        } else {
+            board[row][col] = currentPlayer;
+            cellBtn.innerText = currentPlayer;
+            cellBtn.style.color = (currentPlayer === 'X') ? '#2e8b57' : '#ff4436';
+        }
+
+        if (checkWin(currentPlayer)) {
+            balance += 1.00;
+            updateBalance();
+            createCoinRain();
+            setTimeout(() => {
+                alert("🎉 🎉 🎉 ФАНТАСТИЧЕСКАЯ ПОБЕДА! Получено +1.00\$");
+                currentPlayer = 'X';
+                resetGame();
+            }, 500);
+            return;
+        }
+
+        if (isBotMode) {
+            makeAIMove();
+        } else {
+            currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+            if (!gameOver) {
+                startNewRound();
+            }
+        }
+    }
+
+    function makeAIMove() {
+        let emptyCells = [];
+        for(let i=0; i<3; i++) {
+            for(let j=0; j<3; j++) {
+                if (board[i][j] === '.') emptyCells.push({r: i, c: j});
+            }
+        }
+
+        if (emptyCells.length === 0) {
+            alert("Ничья! На поле боя мест не осталось.");
+            resetGame();
+            return;
+        }
+
+        let randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+        let aiRow = randomCell.r;
+        let aiCol = randomCell.c;
+        let index = aiRow * 3 + aiCol;
+        let cellBtn = document.getElementsByClassName('cell')[index];
+
+        if (bombBoard[aiRow][aiCol]) {
+            cellBtn.innerText = '💥';
+            cellBtn.style.backgroundColor = '#f44336';
+            balance += 1.00;
+            updateBalance();
+            createCoinRain();
+            setTimeout(() => {
+                alert("🤖 Робот подорвался на мине! Тебе начислено +1.00\$");
+                resetGame();
+            }, 500);
+        } else {
+            board[aiRow][aiCol] = 'O';
+            cellBtn.innerText = 'O';
+            cellBtn.style.color = '#f44336';
+
+            if (checkWin('O')) {
+                alert("🤖 Робот-ИИ собрал 3 в ряд и выиграл.");
+                resetGame();
+            }
+        }
+
+        if (!gameOver) {
+            startNewRound();
+        }
+    }
+
+
+    function resetGame() {
+        board = [['.','.','.'], ['.','.','.'], ['.','.','.']];
+        let cells = document.getElementsByClassName('cell');
+        for(let i=0; i<cells.length; i++) {
+            cells[i].innerText = '';
+            cells[i].style.backgroundColor = '#2a2a2a';
+            cells[i].style.borderColor = '#3d3d3d';
+        }
+        startNewRound();
+    }
+
+    function checkWin(sign) {
+        for (let i = 0; i < 3; i++) {
+            if (board[i][0] === sign && board[i][1] === sign && board[i][2] === sign) return true;
+            if (board[0][i] === sign && board[1][i] === sign && board[2][i] === sign) return true;
+        }
+        if (board[0][0] === sign && board[1][1] === sign && board[2][2] === sign) return true;
+        if (board[0][2] === sign && board[1][1] === sign && board[2][0] === sign) return true;
+        return false;
+    }
+
+    // КРАСИВЫЙ ЭФФЕКТ СЫПЛЮЩИХСЯ МОНЕТ
+    function createCoinRain() {
+        for (let i = 0; i < 40; i++) {
+            let coin = document.createElement('div');
+            coin.innerText = Math.random() > 0.5 ? '💰' : '🪙';
+            coin.style.position = 'fixed';
+            coin.style.left = Math.random() * 100 + 'vw';
+            coin.style.top = '-50px';
+            coin.style.fontSize = Math.random() * 20 + 20 + 'px';
+            coin.style.zIndex = '9999';
+            coin.style.transition = 'transform ' + (Math.random() * 2 + 1) + 's linear, opacity 1s';
+
+            document.body.appendChild(coin);
+
+            setTimeout(() => {
+                coin.style.transform = 'translateY(' + (window.innerHeight + 100) + 'px) rotate(' + (Math.random() * 360) + 'deg)';
+            }, 50);
+
+            setTimeout(() => {
+                coin.remove();
+            }, 3000);
+        }
+    }
+
+    startNewRound();
+</script>
+</body>
+</html>
