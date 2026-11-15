@@ -4,6 +4,7 @@ const translations = {
         modeAI: "🤖 Режим: Против ИИ",
         modeRomantic: "💖 Режим: Вечерний романтический",
         btnDay: "☀️ День",
+
         btnEvening: "🌙 Романтический вечер",
         wishTitle: "💖 Игра на желание 💖",
         wishSubtitle: "Выбери или напиши желание, которое исполнит проигравший:",
@@ -17,11 +18,19 @@ const translations = {
         balance: "💰 Твой баланс: ",
         plane: "✈️ ВЖУХ! Самолёт скинул мину в строку №",
         shopTitle: "🛒 МАГАЗИН ДОП. ОПЦИЙ",
-        itemShield: "🛡 Щит (0.50$)",
-        itemScanner: "🚩 Сканер (0.30$)",
+        itemShield: "🛡 Укрытие",
+        itemScanner: "🚩 Сканер",
+        shieldActive: "🛡️ Укрытие активировано на этот ход!",
+        scannerActive: "🚩 РАЗВЕДКА: Бомба в строке №{row}, столбце №{col}!",
+        adTitle: "🎬 Рекламная пауза",
+        adDesc: "Поддержите проект просмотром рекламы",
+        adWait: "Закрыть через {sec} сек...",
+        adClose: "Продолжить ▶",
         winDay: "🎉 ФАНТАСТИЧЕСКАЯ ПОБЕДА! Получено +1.00$",
         winAI: "🤖 Робот-ИИ собрал 3 в ряд и выиграл.",
-        romanticAlert: "🤖💖 Робот поймал твоё сердечко! Настоящая цифровая любовь!"
+        romanticAlert: "🤖💖 Победа! Исполняется желание:"
+
+
     },
     uk: {
         modeAI: "🤖 Режим: Проти ШІ",
@@ -40,11 +49,18 @@ const translations = {
         balance: "💰 Твій баланс: ",
         plane: "✈️ ВЖУХ! Літак скинув міну в рядок №",
         shopTitle: "🛒 МАГАЗИН ДОД. ОПЦІЙ",
-        itemShield: "🛡 Щит (0.50$)",
-        itemScanner: "🚩 Сканер (0.30$)",
+        itemShield: "🛡 Укриття",
+        itemScanner: "🚩 Сканер",
+        shieldActive: "🛡️ Укриття активовано на цей хід!",
+        scannerActive: "🚩 РОЗВІДКА: Бомба в рядку №{row}, стовпці №{col}!",
+        adTitle: "🎬 Рекламна пауза",
+        adDesc: "Підтримайте проєкт переглядом реклами",
+        adWait: "Закрити через {sec} сек...",
+        adClose: "Продовжити ▶",
         winDay: "🎉 ФАНТАСТИЧНА ПЕРЕМОГА! Отримано +1.00$",
         winAI: "🤖 Робот-ШІ зібрав 3 в ряд і виграв.",
-        romanticAlert: "🤖💖 Робот упіймав твоє серденько! Справжнє цифрове кохання!"
+        romanticAlert: "🤖💖 Перемога! Виконується бажання:"
+
     },
     en: {
         modeAI: "🤖 Mode: Against AI",
@@ -63,11 +79,18 @@ const translations = {
         balance: "💰 Your balance: ",
         plane: "✈️ WHOOSH! The airplane dropped a mine in row №",
         shopTitle: "🛒 BONUS SHOP",
-        itemShield: "🛡 Shield (0.50$)",
-        itemScanner: "🚩 Scanner (0.30$)",
+        itemShield: "🛡 Shelter",
+        itemScanner: "🚩 Scanner",
+        shieldActive: "🛡️ Shelter activated for this turn!",
+        scannerActive: "🚩 RECON: Bomb in row №{row}, col №{col}!",
+        adTitle: "🎬 Ad Break",
+        adDesc: "Support the project by watching an ad",
+        adWait: "Close in {sec} sec...",
+        adClose: "Continue ▶",
         winDay: "🎉 FANTASTIC VICTORY! Received +1.00$",
         winAI: "🤖 AI Robot got 3 in a row and won.",
-        romanticAlert: "🤖💖 The robot caught your heart! True digital love!"
+        romanticAlert: "🤖💖 Victory! Wish to fulfill:"
+
     },
     de: {
         modeAI: "🤖 Modus: Gegen KI",
@@ -86,11 +109,18 @@ const translations = {
         balance: "💰 Ihr Guthaben: ",
         plane: "✈️ WUSCH! Das Flugzeug hat eine Mine in Zeile № abgeworfen ",
         shopTitle: "🛒 ZUSATZSHOP",
-        itemShield: "🛡 Schild (0.50$)",
-        itemScanner: "🚩 Scanner (0.30$)",
+        itemShield: "🛡 Schutz",
+        itemScanner: "🚩 Scanner",
+        shieldActive: "🛡️ Schutz für diesen Zug aktiviert!",
+        scannerActive: "🚩 AUFKLÄRUNG: Bombe in Zeile №{row}, Spalte №{col}!",
+        adTitle: "🎬 Werbepause",
+        adDesc: "Unterstütze das Projekt durch Werbung",
+        adWait: "Schließen in {sec} Sek...",
+        adClose: "Weiter ▶",
         winDay: "🎉 FANTASTISCHER SIEG! +1.00$ erhalten",
         winAI: "🤖 KI-Roboter hat 3 in einer Reihe und gewinnt.",
-        romanticAlert: "🤖💖 Der Roboter hat dein Herz gefangen! Echte digitale Liebe!"
+        romanticAlert: "🤖💖 Sieg! Wunsch wird erfüllt:"
+
     },
     zh: {
         modeAI: "🤖 模式: 对战人工智能",
@@ -109,11 +139,18 @@ const translations = {
         balance: "💰 你的余额: ",
         plane: "✈️ 嗖！ 飞机在第几行投下了地雷 №",
         shopTitle: "🛒 特色商店",
-        itemShield: "🛡 护盾 (0.50$)",
-        itemScanner: "🚩 扫描仪 (0.30$)",
+        itemShield: "🛡 掩体",
+        itemScanner: "🚩 扫描仪",
+        shieldActive: "🛡️ 本回合已激活掩体保护！",
+        scannerActive: "🚩 侦察：炸弹在第 {row} 行，第 {col} 列！",
+        adTitle: "🎬 广告时间",
+        adDesc: "观看广告支持本项目",
+        adWait: "{sec} 秒后可关闭...",
+        adClose: "继续 ▶",
         winDay: "🎉 绝妙的胜利！获得 +1.00$",
         winAI: "🤖 人工智能机器人连成 3 个，赢了。",
-        romanticAlert: "🤖💖 机器人抓住了你的心！真正的数字之恋！"
+        romanticAlert: "🤖💖 胜利！要实现的愿望："
+
     },
     chn: {
         modeAI: "🤖 模式: 对战人工智能",
@@ -132,11 +169,18 @@ const translations = {
         balance: "💰 你的余额: ",
         plane: "✈️ 嗖！ 飞机在第几行投下了地雷 №",
         shopTitle: "🛒 特色商店",
-        itemShield: "🛡 护盾 (0.50$)",
-        itemScanner: "🚩 扫描仪 (0.30$)",
+        itemShield: "🛡 掩体",
+        itemScanner: "🚩 扫描仪",
+        shieldActive: "🛡️ 本回合已激活掩体保护！",
+        scannerActive: "🚩 侦察：炸弹在第 {row} 行，第 {col} 列！",
+        adTitle: "🎬 广告时间",
+        adDesc: "观看广告支持本项目",
+        adWait: "{sec} 秒后可关闭...",
+        adClose: "继续 ▶",
         winDay: "🎉 绝妙的胜利！获得 +1.00$",
         winAI: "🤖 人工智能机器人连成 3 个，赢了。",
-        romanticAlert: "🤖💖 机器人抓住了你的心！真正的数字之恋！"
+        romanticAlert: "🤖💖 胜利！要实现的愿望："
+
     },
     ja: {
         modeAI: "🤖 モード: AI対戦",
@@ -155,11 +199,18 @@ const translations = {
         balance: "💰 あなたの残高: ",
         plane: "✈️ ブーーーン！飛行機が列に鉱山を投下しました №",
         shopTitle: "🛒 追加ショップ",
-        itemShield: "🛡 シールド (0.50$)",
-        itemScanner: "🚩 スキャナー (0.30$)",
+        itemShield: "🛡 シェルター",
+        itemScanner: "🚩 スキャナー",
+        shieldActive: "🛡️ このターンのシェルターが有効になりました！",
+        scannerActive: "🚩 偵察：爆弾は {row} 行目、{col} 列目にあります！",
+        adTitle: "🎬 広告タイム",
+        adDesc: "広告を見てプロジェクトを応援しよう",
+        adWait: "あと {sec} 秒で閉じられます...",
+        adClose: "続ける ▶",
         winDay: "🎉 素晴らしい勝利！+1.00$ を獲得しました",
         winAI: "🤖 AIロボットが3つ並んで勝ちました。",
-        romanticAlert: "🤖💖 ロボットがあなたのハートをキャッチしました！本物のデジタルラブ！"
+        romanticAlert: "🤖💖 勝利！叶えるお願い："
+
     },
     jpn: {
         modeAI: "🤖 モード: AI対戦",
@@ -178,11 +229,18 @@ const translations = {
         balance: "💰 あなたの残高: ",
         plane: "✈️ ブーーーン！飛行機が列に鉱山を投下しました №",
         shopTitle: "🛒 追加ショップ",
-        itemShield: "🛡 シールド (0.50$)",
-        itemScanner: "🚩 スキャナー (0.30$)",
+        itemShield: "🛡 シェルター",
+        itemScanner: "🚩 スキャナー",
+        shieldActive: "🛡️ このターンのシェルターが有効になりました！",
+        scannerActive: "🚩 偵察：爆弾は {row} 行目、{col} 列目にあります！",
+        adTitle: "🎬 広告タイム",
+        adDesc: "広告を見てプロジェクトを応援しよう",
+        adWait: "あと {sec} 秒で閉じられます...",
+        adClose: "続ける ▶",
         winDay: "🎉 素晴らしい勝利！+1.00$ を獲得しました",
         winAI: "🤖 AIロボットが3つ並んで勝ちました。",
-        romanticAlert: "🤖💖 ロボットがあなたのハートをキャッチしました！本物のデジタルラブ！"
+        romanticAlert: "🤖💖 勝利！叶えるお願い："
+
     },
     hi: {
         modeAI: "🤖 मोड: एआई के खिलाफ",
@@ -201,11 +259,18 @@ const translations = {
         balance: "💰 आपका बैलेंस: ",
         plane: "✈️ वूश! हवाई जहाज ने कतार में माइन गिरा दी №",
         shopTitle: "🛒 बोनस स्टोर",
-        itemShield: "🛡 शील्ड (0.50$)",
-        itemScanner: "🚩 स्कैनर (0.30$)",
+        itemShield: "🛡 आश्रय",
+        itemScanner: "🚩 स्कैनर",
+        shieldActive: "🛡️ इस चाल के लिए आश्रय सक्रिय!",
+        scannerActive: "🚩 टोही: बम पंक्ति №{row}, कॉलम №{col} में है!",
+        adTitle: "🎬 विज्ञापन ब्रेक",
+        adDesc: "विज्ञापन देखकर प्रोजेक्ट का समर्थन करें",
+        adWait: "{sec} सेकंड में बंद करें...",
+        adClose: "जारी रखें ▶",
         winDay: "🎉 शानदार जीत! प्राप्त हुए +1.00$",
         winAI: "🤖 एआई रोबोट ने लगातार 3 बनाए और जीत गया।",
-        romanticAlert: "🤖💖 रोबोट ने आपका दिल जीत लिया! सच्चा डिजिटल प्यार!"
+        romanticAlert: "🤖💖 जीत! इच्छा पूरी होगी:"
+
     },
     hin: {
         modeAI: "🤖 मोड: एआई के खिलाफ",
@@ -224,11 +289,18 @@ const translations = {
         balance: "💰 आपका बैलेंस: ",
         plane: "✈️ वूश! हवाई जहाज ने कतार में माइन गिरा दी №",
         shopTitle: "🛒 बोनस स्टोर",
-        itemShield: "🛡 शील्ड (0.50$)",
-        itemScanner: "🚩 स्कैनर (0.30$)",
+        itemShield: "🛡 आश्रय",
+        itemScanner: "🚩 स्कैनर",
+        shieldActive: "🛡️ इस चाल के लिए आश्रय सक्रिय!",
+        scannerActive: "🚩 टोही: बम पंक्ति №{row}, कॉलम №{col} में है!",
+        adTitle: "🎬 विज्ञापन ब्रेक",
+        adDesc: "विज्ञापन देखकर प्रोजेक्ट का समर्थन करें",
+        adWait: "{sec} सेकंड में बंद करें...",
+        adClose: "जारी रखें ▶",
         winDay: "🎉 शानदार जीत! प्राप्त हुए +1.00$",
         winAI: "🤖 एआई रोबोट ने लगातार 3 बनाए और जीत गया।",
-        romanticAlert: "🤖💖 रोबोट ने आपका दिल जीत लिया! सच्चा डिजिटल प्यार!"
+        romanticAlert: "🤖💖 जीत! इच्छा पूरी होगी:"
+
     }
 };
 
@@ -236,19 +308,18 @@ const translations = {
 
 
 
-let currentLang = 'ru'; // Текущий язык по умолчанию
-
+let currentLang = 'ru';
 let gameMode = 'day'; // 'day' или 'evening'
 let activeWish = '';  // Текст выбранного желания
 
-// Переключение режимов
+// Переключение режимов (День / Романтический вечер)
 function setGameMode(mode) {
     gameMode = mode;
     if (mode === 'evening') {
-        document.body.style.backgroundColor = '#1a0f29'; // Романтический вечерний фон
-        document.getElementById('wish-modal').style.display = 'flex'; // Открываем ввод желаний
+        document.body.style.backgroundColor = '#1a0f29';
+        document.getElementById('wish-modal').style.display = 'flex';
     } else {
-        document.body.style.backgroundColor = '#121212'; // Стандартный дневной фон
+        document.body.style.backgroundColor = '#121212';
         document.getElementById('active-wish-panel').style.display = 'none';
         activeWish = '';
         resetGame();
@@ -265,7 +336,7 @@ function selectPresetWish(wishText) {
 function confirmWish() {
     let wishInput = document.getElementById('custom-wish').value.trim();
     if (!wishInput) {
-        alert("Пожалуйста, выберите или введите желание!");
+        alert(translations[currentLang].wishEmptyAlert);
         return;
     }
     activeWish = wishInput;
@@ -275,12 +346,11 @@ function confirmWish() {
     resetGame();
 }
 
-// КРАСИВЫЙ ЭФФЕКТ СЫПЛЮЩИХСЯ СЕРДЕЧЕК (наша новая гордость)
+// Эффект падающих сердечек
 function createHeartRain() {
     const hearts = ['❤️', '💖', '💕', '💗', '👩‍❤️‍👨'];
     for (let i = 0; i < 40; i++) {
         let heart = document.createElement('div');
-        // Случайный выбор сердечка из массива
         heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
         heart.style.position = 'fixed';
         heart.style.left = Math.random() * 100 + 'vw';
@@ -288,422 +358,456 @@ function createHeartRain() {
         heart.style.fontSize = Math.random() * 20 + 20 + 'px';
         heart.style.zIndex = '9999';
         heart.style.transition = 'transform ' + (Math.random() * 2 + 1) + 's linear, opacity 1s';
-
         document.body.appendChild(heart);
 
         setTimeout(() => {
             heart.style.transform = 'translateY(' + (window.innerHeight + 100) + 'px) rotate(' + (Math.random() * 360) + 'deg)';
         }, 50);
-
-        setTimeout(() => {
-            heart.remove();
-        }, 3000);
+        setTimeout(() => heart.remove(), 3000);
     }
 }
 
-    let balance = 3.37;
-    let board = [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']];
-    let bombBoard = [[false, false, false], [false, false, false], [false, false, false]];
-    let hasShield = false;
-    let bombRow, bombCol;
-    let gameOver = false;
+let balance = 0; // При каждом входе баланс сбрасывается на 0
+let board = [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']];
+let bombBoard = [[false, false, false], [false, false, false], [false, false, false]];
+let hasShield = false;
+let bombRow, bombCol;
+let gameOver = false;
 
-        function startNewRound() {
-        for(let i=0; i<3; i++) {
-            for(let j=0; j<3; j++) bombBoard[i][j] = false;
-        }
-        bombRow = Math.floor(Math.random() * 3);
-        bombCol = Math.floor(Math.random() * 3);
-        bombBoard[bombRow][bombCol] = true;
+// Счётчики рекламы для бонусов
+let shieldAdCount = 0;
+let scannerAdCount = 0;
+let pendingAdReward = null; // 'shield', 'scanner' или 'endgame'
+let adTimerInterval = null;
 
-        const status = document.getElementById('status');
-        /* ТЕПЕРЬ СТРОКИ БУДУТ НАЗЫВАТЬСЯ 1, 2, 3 вместо 0, 1, 2: */
-        status.innerText = `${translations[currentLang].plane}${bombRow + 1}!`;
-        status.style.color = '#00bcd4';
-        document.getElementById('shield-btn').disabled = false;
-        document.getElementById('scanner-btn').disabled = false;
+function updateShopButtonsText() {
+    const t = translations[currentLang];
+    const btnShieldEl = document.getElementById('shield-btn');
+    const btnScannerEl = document.getElementById('scanner-btn');
+
+    if (btnShieldEl) {
+        btnShieldEl.innerText = hasShield
+            ? `${t.itemShield} (✅)`
+            : `${t.itemShield} (${shieldAdCount}/3 🎬)`;
     }
-
-
-    function updateBalance() {
-        const balanceEl = document.getElementById('balance');
-        if (balanceEl) {
-            balanceEl.innerText = `${translations[currentLang].balance}${balance.toFixed(2)}$`;
-        }
+    if (btnScannerEl) {
+        btnScannerEl.innerText = `${t.itemScanner} (${scannerAdCount}/1 🎬)`;
     }
+}
 
+function startNewRound() {
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) bombBoard[i][j] = false;
+    }
+    bombRow = Math.floor(Math.random() * 3);
+    bombCol = Math.floor(Math.random() * 3);
+    bombBoard[bombRow][bombCol] = true;
 
-    function buyShield() {
-        if (balance >= 0.50) {
-            balance -= 0.50;
-            hasShield = true;
-            updateBalance();
-            document.getElementById('status').innerText = "🛡️ Укрытие активировано на этот ход!";
-            document.getElementById('status').style.color = "#2e8b57";
-            document.getElementById('shield-btn').disabled = true;
+    const status = document.getElementById('status');
+    status.innerText = `${translations[currentLang].plane}${bombRow + 1}!`;
+    status.style.color = '#00bcd4';
+
+    const shieldBtn = document.getElementById('shield-btn');
+    const scannerBtn = document.getElementById('scanner-btn');
+    if (shieldBtn) shieldBtn.disabled = hasShield;
+    if (scannerBtn) scannerBtn.disabled = false;
+    updateShopButtonsText();
+}
+
+function updateBalance() {
+    const balanceEl = document.getElementById('balance');
+    if (balanceEl) {
+        balanceEl.innerText = `${translations[currentLang].balance}${balance.toFixed(2)}$`;
+    }
+}
+
+// Открытие рекламного окна с таймером на 5 секунд
+function openAdModal(rewardType) {
+    pendingAdReward = rewardType;
+    const modal = document.getElementById('ad-modal');
+    const titleEl = document.getElementById('ad-modal-title');
+    const descEl = document.getElementById('ad-modal-desc');
+    const closeBtn = document.getElementById('ad-close-btn');
+    const t = translations[currentLang];
+
+    if (titleEl) titleEl.innerText = t.adTitle;
+    if (descEl) descEl.innerText = t.adDesc;
+
+    let secondsLeft = 5;
+    closeBtn.disabled = true;
+    closeBtn.style.backgroundColor = '#555';
+    closeBtn.style.color = '#aaa';
+    closeBtn.style.cursor = 'not-allowed';
+    closeBtn.innerText = t.adWait.replace('{sec}', secondsLeft);
+
+    modal.style.display = 'flex';
+
+    clearInterval(adTimerInterval);
+    adTimerInterval = setInterval(() => {
+        secondsLeft--;
+        if (secondsLeft > 0) {
+            closeBtn.innerText = t.adWait.replace('{sec}', secondsLeft);
         } else {
-            alert("❌ Недостаточно средств для щита!");
+            clearInterval(adTimerInterval);
+            closeBtn.disabled = false;
+            closeBtn.style.backgroundColor = '#2e8b57';
+            closeBtn.style.color = '#fff';
+            closeBtn.style.cursor = 'pointer';
+            closeBtn.innerText = t.adClose;
         }
+    }, 1000);
+}
+
+function watchAdForBonus(bonusType) {
+    if (bonusType === 'shield' && hasShield) return;
+    openAdModal(bonusType);
+}
+
+function closeAdModal() {
+    const modal = document.getElementById('ad-modal');
+    modal.style.display = 'none';
+    const t = translations[currentLang];
+
+    if (pendingAdReward === 'shield') {
+        shieldAdCount++;
+        if (shieldAdCount >= 3) {
+            shieldAdCount = 0;
+            hasShield = true;
+            document.getElementById('status').innerText = t.shieldActive;
+            document.getElementById('status').style.color = '#2e8b57';
+            document.getElementById('shield-btn').disabled = true;
+        }
+        updateShopButtonsText();
+    } else if (pendingAdReward === 'scanner') {
+        scannerAdCount++;
+        if (scannerAdCount >= 1) {
+            scannerAdCount = 0;
+            const scanText = t.scannerActive
+                .replace('{row}', bombRow + 1)
+                .replace('{col}', bombCol + 1);
+            document.getElementById('status').innerText = scanText;
+            document.getElementById('status').style.color = '#ff9800';
+            document.getElementById('scanner-btn').disabled = true;
+        }
+        updateShopButtonsText();
+    } else if (pendingAdReward === 'endgame') {
+        currentPlayer = 'X';
+        resetGame();
     }
 
+    pendingAdReward = null;
+}
 let isBotMode = true;
 let currentPlayer = 'X';
+
 function toggleGameMode() {
-    isBotMode = !isBotMode; // переключает режим
-    const btn = document.getElementById("modeBtn");
-
-    if (isBotMode) {
-        btn.innerText = "🤖 Режим: Против ИИ";
-        btn.style.backgroundColor = "#2e8b57";
-    } else {
-        btn.innerText = "👥 Режим: Вдвоем";
-        btn.style.backgroundColor = "#ff4436";
-    }
-
-    resetGame(); // перезапуск поля при смене режима
+    isBotMode = !isBotMode;
+    changeLanguage(currentLang);
+    resetGame();
 }
 
+function makeMove(row, col) {
+    if (board[row][col] !== '.' || gameOver) return;
 
-    function buyScanner() {
-        if (balance >= 0.30) {
-            balance -= 0.30;
-            updateBalance();
-            document.getElementById('status').innerText = `🚩 РАЗВЕДКА: Бомба в строке №${bombRow}, столбце №${bombCol}!`;
-            document.getElementById('status').style.color = "#ff9800";
-            document.getElementById('scanner-btn').disabled = true;
-        } else {
-            alert("❌ Недостаточно средств для сканера!");
-        }
-    }
+    let index = row * 3 + col;
+    let cellBtn = document.getElementsByClassName('cell')[index];
 
-            function makeMove(row, col) {
-        if (board[row][col] !== '.' || gameOver) return;
-
-        let index = row * 3 + col;
-        let cellBtn = document.getElementsByClassName('cell')[index];
-
-        if (bombBoard[row][col]) {
-            if (hasShield) {
-                alert("🛡️ БУУУМ! Щит поглотил взрыв мины! Вы спасены!");
-                hasShield = false;
-                document.getElementById('shield-btn').disabled = false;
-                board[row][col] = currentPlayer;
-                cellBtn.innerText = currentPlayer;
-                cellBtn.style.color = (currentPlayer === 'X') ? '#2e8b57' : '#ff4436';
-            } else {
-                cellBtn.innerText = '💥';
-                cellBtn.style.backgroundColor = '#f44336';
-
-                balance = Math.max(0, balance - 0.50);
-                updateBalance();
-
-                setTimeout(() => {
-                    alert("БА-БАХ! 💥 Вы подорвались на авиабомбе!\nШтраф: -0.50$. Раунд перезапускается!");
-                    currentPlayer = 'X';
-                    resetGame();
-                }, 100);
-                return;
-            }
-        } else {
+    if (bombBoard[row][col]) {
+        if (hasShield) {
+            alert("🛡️ БУУУМ! Укрытие поглотило взрыв мины! Вы спасены!");
+            hasShield = false;
+            document.getElementById('shield-btn').disabled = false;
+            updateShopButtonsText();
             board[row][col] = currentPlayer;
             cellBtn.innerText = currentPlayer;
             cellBtn.style.color = (currentPlayer === 'X') ? '#2e8b57' : '#ff4436';
-        }
+        } else {
+            cellBtn.innerText = '💥';
+            cellBtn.style.backgroundColor = '#f44336';
 
-       if (checkWin(currentPlayer)) {
-    if (gameMode === 'evening') {
-        createHeartRain();
-        setTimeout(() => {
-            alert(translations[currentLang].winDay);
-            currentPlayer = 'X';
-            resetGame();
-        }, 500);
+            if (gameMode !== 'evening') {
+                balance = Math.max(0, balance - 0.50);
+                updateBalance();
+            }
+
+            setTimeout(() => {
+                alert("БА-БАХ! 💥 Вы подорвались на авиабомбе!");
+                openAdModal('endgame');
+            }, 100);
+            return;
+        }
     } else {
-        balance += 1.00;
-        updateBalance();
-        createCoinRain();
-        setTimeout(() => {
-            alert("🎉 ФАНТАСТИЧЕСКАЯ ПОБЕДА! Получено +1.00$");
-            currentPlayer = 'X';
-            resetGame();
-        }, 500);
+        board[row][col] = currentPlayer;
+        cellBtn.innerText = currentPlayer;
+        cellBtn.style.color = (currentPlayer === 'X') ? '#2e8b57' : '#ff4436';
     }
-    return;
+
+    if (checkWin(currentPlayer)) {
+        if (gameMode === 'evening') {
+            createHeartRain();
+            setTimeout(() => {
+                let winText = translations[currentLang].romanticAlert + "\n\n💖 " + activeWish;
+                alert(winText);
+                openAdModal('endgame');
+            }, 500);
+        } else {
+            balance += 1.00;
+            updateBalance();
+            createCoinRain();
+            setTimeout(() => {
+                alert(translations[currentLang].winDay);
+                openAdModal('endgame');
+            }, 500);
+        }
+        return;
+    }
+
+    if (isBotMode) {
+        makeAIMove();
+    } else {
+        currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
+        if (!gameOver) {
+            startNewRound();
+        }
+    }
 }
 
-
-        if (isBotMode) {
-            makeAIMove();
-        } else {
-            currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
-            if (!gameOver) {
-                startNewRound();
-            }
-        }
-    }
-
-   function makeAIMove() {
+function makeAIMove() {
     let emptyCells = [];
-    for(let i=0; i<3; i++) {
-        for(let j=0; j<3; j++) {
-            if (board[i][j] === '.') emptyCells.push({r: i, c: j});
+    for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+            if (board[i][j] === '.') emptyCells.push({ r: i, c: j });
         }
     }
 
     if (emptyCells.length === 0) {
         alert("Ничья! На поле боя мест не осталось.");
-        resetGame();
+        openAdModal('endgame');
         return;
     }
 
     let targetCell = null;
 
-    // 1. АТАКА: Проверяем, можем ли мы (нолики) выиграть этим ходом
+    // 1. АТАКА
     for (let cell of emptyCells) {
         board[cell.r][cell.c] = 'O';
         if (checkWin('O')) {
             targetCell = cell;
-            board[cell.r][cell.c] = '.'; // ИСПРАВЛЕНО: возвращаем строго ТУ КЛЕТКУ И С ТОЧКОЙ
+            board[cell.r][cell.c] = '.';
             break;
         }
-        board[cell.r][cell.c] = '.'; // ИСПРАВЛЕНО: возвращаем строго ТУ КЛЕТКУ И С ТОЧКОЙ
+        board[cell.r][cell.c] = '.';
     }
 
-    // 2. ЗАЩИТА: Если выигрыша нет, блокируем игрока (крестики)
+    // 2. ЗАЩИТА
     if (!targetCell) {
         for (let cell of emptyCells) {
             board[cell.r][cell.c] = 'X';
             if (checkWin('X')) {
                 targetCell = cell;
-                board[cell.r][cell.c] = '.'; // ИСПРАВЛЕНО: возвращаем ТОЧКУ
+                board[cell.r][cell.c] = '.';
                 break;
             }
-            board[cell.r][cell.c] = '.'; // ИСПРАВЛЕНО: возвращаем ТОЧКУ
+            board[cell.r][cell.c] = '.';
         }
     }
 
-    // 3. ЦЕНТР: Если центр свободен, занимаем его
+    // 3. ЦЕНТР
     if (!targetCell) {
         let center = emptyCells.find(cell => cell.r === 1 && cell.c === 1);
         if (center) targetCell = center;
     }
 
-    // 4. СЛУЧАЙНЫЙ ХОД: Если умных ходов нет, берем случайную клетку
+    // 4. СЛУЧАЙНЫЙ ХОД
     if (!targetCell) {
         targetCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
     }
 
-    // Выполнение хода ИИ
     let aiRow = targetCell.r;
     let aiCol = targetCell.c;
-
     let index = aiRow * 3 + aiCol;
     let cellBtn = document.getElementsByClassName('cell')[index];
 
-    // ПРОВЕРКА НА МИНУ (Ваша сохраненная логика)
-    // ПРОВЕРКА НА МИНУ / СЕРДЕЧКО
-if (bombBoard[aiRow][aiCol]) {
-    if (gameMode === 'evening') {
-        cellBtn.innerText = '💖';
-        cellBtn.style.backgroundColor = '#e91e63';
-        createHeartRain();
-                        setTimeout(() => {
-                            let winText = translations[currentLang].romanticAlert + "\n\n" + activeWish;
-                            alert(winText);
-                            resetGame();
-                        }, 500);
-                    } else {
-                        cellBtn.innerText = '💣';
-                        cellBtn.style.backgroundColor = '#f44336';
-                        balance += 1.00;
-                        updateBalance();
-                        createCoinRain();
-                        setTimeout(() => {
-                            alert("💥 Робот подорвался на мине! Тебе начислено +1.00$");
-                            resetGame();
-                        }, 500);
-                    }
-
-
-} else {
-    // Обычный ход без сюрпризов...
-    board[aiRow][aiCol] = 'O';
-    cellBtn.innerText = 'O';
-    // Меняем цвет нолика: вечером делаем его нежно-розовым, днём — стандартным красным
-    cellBtn.style.color = (gameMode === 'evening') ? '#ff4081' : '#f44336';
-
-
-            if (checkWin('O')) {
-                alert(translations[currentLang].winAI);
-
-                resetGame();
-            }
-        }
-
-        if (!gameOver) {
-            startNewRound();
-        }
-    }
-
-
-    function resetGame() {
-    board = [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']];
-    let cells = document.getElementsByClassName('cell');
-    for(let i=0; i<cells.length; i++) {
-        cells[i].innerText = '';
-        // Подстраиваем цвет клеток под выбранное время суток
+    if (bombBoard[aiRow][aiCol]) {
         if (gameMode === 'evening') {
-            cells[i].style.backgroundColor = '#2a1b3d';
-            cells[i].style.borderColor = '#ff4081';
-        } else {
-            cells[i].style.backgroundColor = '#2a2a2a';
-            cells[i].style.borderColor = '#3d3d3d';
-        }
-    }
-    startNewRound();
-}
-
-
-    function checkWin(sign) {
-        for (let i = 0; i < 3; i++) {
-            if (board[i][0] === sign && board[i][1] === sign && board[i][2] === sign) return true;
-            if (board[0][i] === sign && board[1][i] === sign && board[2][i] === sign) return true;
-        }
-        if (board[0][0] === sign && board[1][1] === sign && board[2][2] === sign) return true;
-        if (board[0][2] === sign && board[1][1] === sign && board[2][0] === sign) return true;
-        return false;
-    }
-
-    // КРАСИВЫЙ ЭФФЕКТ СЫПЛЮЩИХСЯ МОНЕТ
-    function createCoinRain() {
-        for (let i = 0; i < 40; i++) {
-            let coin = document.createElement('div');
-            coin.innerText = Math.random() > 0.5 ? '💰' : '🪙';
-            coin.style.position = 'fixed';
-            coin.style.left = Math.random() * 100 + 'vw';
-            coin.style.top = '-50px';
-            coin.style.fontSize = Math.random() * 20 + 20 + 'px';
-            coin.style.zIndex = '9999';
-            coin.style.transition = 'transform ' + (Math.random() * 2 + 1) + 's linear, opacity 1s';
-
-            document.body.appendChild(coin);
-
+            cellBtn.innerText = '💖';
+            cellBtn.style.backgroundColor = '#e91e63';
+            createHeartRain();
             setTimeout(() => {
-                coin.style.transform = 'translateY(' + (window.innerHeight + 100) + 'px) rotate(' + (Math.random() * 360) + 'deg)';
-            }, 50);
-
-            setTimeout(() => {
-                coin.remove();
-            }, 3000);
-        }
-    }
-
-    startNewRound();
-
-function changeLanguage(lang) {
-    if (!translations[lang]) return;
-    currentLang = lang;
-
-    // 1. Обновляем баланс
-    updateBalance();
-
-    // 2. Обновляем заголовок магазина
-    const shopTitleEl = document.querySelector('.shop-title');
-    if (shopTitleEl) {
-        shopTitleEl.innerText = translations[currentLang].shopTitle;
-    }
-
-    // 3. Обновляем кнопки в магазине
-    const btnShieldEl = document.getElementById('shield-btn');
-    if (btnShieldEl) {
-        btnShieldEl.innerText = translations[currentLang].itemShield;
-    }
-
-    const btnScannerEl = document.getElementById('scanner-btn');
-    if (btnScannerEl) {
-        btnScannerEl.innerText = translations[currentLang].itemScanner;
-    }
-        // 4. Обновляем кнопки режимов и окно желаний
-        const t = translations[currentLang];
-
-        const btnDay = document.getElementById('btn-day');
-        if (btnDay && t.btnDay) btnDay.innerText = t.btnDay;
-
-        const btnEvening = document.getElementById('btn-evening');
-        if (btnEvening && t.btnEvening) btnEvening.innerText = t.btnEvening;
-
-        const wishTitle = document.getElementById('wish-modal-title');
-        if (wishTitle && t.wishTitle) wishTitle.innerText = t.wishTitle;
-
-        const wishSub = document.getElementById('wish-modal-subtitle');
-        if (wishSub && t.wishSubtitle) wishSub.innerText = t.wishSubtitle;
-
-        const wish1 = document.getElementById('wish-preset-1');
-        if (wish1 && t.wish1) wish1.innerText = t.wish1;
-
-        const wish2 = document.getElementById('wish-preset-2');
-        if (wish2 && t.wish2) wish2.innerText = t.wish2;
-
-        const wish3 = document.getElementById('wish-preset-3');
-        if (wish3 && t.wish3) wish3.innerText = t.wish3;
-
-        const wishInput = document.getElementById('custom-wish');
-        if (wishInput && t.wishPlaceholder) wishInput.placeholder = t.wishPlaceholder;
-
-        const btnConfirm = document.getElementById('btn-confirm-wish');
-        if (btnConfirm && t.wishConfirm) btnConfirm.innerText = t.wishConfirm;
-
-    const onTheLineEl = document.getElementById('on-the-line-label');
-    if (onTheLineEl && t.onTheLine) onTheLineEl.innerText = t.onTheLine;
-
-
-    // 4. Обновляем текст на зеленой кнопке режима
-    const modeBtnEl = document.getElementById('modeBtn');
-    if (modeBtnEl) {
-        if (isBotMode) {
-            modeBtnEl.innerText = translations[currentLang].modeAI;
+                let winText = translations[currentLang].romanticAlert + "\n\n💖 " + activeWish;
+                alert(winText);
+                openAdModal('endgame');
+            }, 500);
         } else {
-            // Массив переводов для режима "Вдвоем" (если ключа нет, покажет русский дефолт)
-            const twoPlayersTranslations = {
-                ru: "👥 Режим: Вдвоем",
-                uk: "👥 Режим: Вдвох",
-                en: "👥 Mode: Two Players",
-                de: "👥 Modus: Zwei Spieler",
-                zh: "👥 模式: 双人对战",
-                chn: "👥 模式: 双人对战",
-                ja: "👥 モード: 2人対戦",
-                jpn: "👥 モード: 2人対戦",
-                hi: "👥 मोड: दो खिलाड़ी",
-                hin: "👥 मोड: दो खिलाड़ी"
-            };
-            modeBtnEl.innerText = twoPlayersTranslations[currentLang] || "👥 Режим: Вдвоем";
+            cellBtn.innerText = '💣';
+            cellBtn.style.backgroundColor = '#f44336';
+            balance += 1.00;
+            updateBalance();
+            createCoinRain();
+            setTimeout(() => {
+                alert(translations[currentLang].winDay);
+                openAdModal('endgame');
+            }, 500);
         }
-    }
-
-    // 5. Переводим строку самолёта прямо на лету!
-    // Ищем элемент, где выводится текст самолёта (проверь его ID в своем коде, обычно это что-то вроде plane-info или plane-status)
-    const planeLogEl = document.getElementById('plane-info') || document.querySelector('.plane-log');
-    if (planeLogEl && planeLogEl.innerText.trim() !== "") {
-        // Вытаскиваем номер строки из старого текста (ищем цифру в конце строки)
-        const match = planeLogEl.innerText.match(/\d+/);
-        if (match) {
-            const rowNumber = match[0];
-            planeLogEl.innerText = translations[currentLang].plane + rowNumber + "!";
-        }
-    }
-}
-// Автоматическое определение языка при старте игры
-document.addEventListener("DOMContentLoaded", () => {
-    // Получаем двухбуквенный код языка браузера (например, "ru", "en", "hi")
-    const userLang = (navigator.language || navigator.userLanguage).substring(0, 2).toLowerCase();
-
-    // Список поддерживаемых языков в нашей игре
-    const supportedLangs = ['ru', 'uk', 'en', 'de', 'zh', 'chn', 'ja', 'jpn', 'hi', 'hin'];
-
-    // Если язык пользователя есть в списке — включаем его, иначе ставим 'ru' (или 'en') по умолчанию
-    if (supportedLangs.includes(userLang)) {
-        changeLanguage(userLang);
+        return;
     } else {
-        changeLanguage('ru');
+        board[aiRow][aiCol] = 'O';
+        cellBtn.innerText = 'O';
+        cellBtn.style.color = (gameMode === 'evening') ? '#ff4081' : '#f44336';
+
+        if (checkWin('O')) {
+            setTimeout(() => {
+                alert(translations[currentLang].winAI);
+                openAdModal('endgame');
+            }, 200);
+            return;
+        }
     }
-});
+
+    if (!gameOver) {
+        startNewRound();
+    }
+}
+
+
+   function resetGame() {
+       board = [['.', '.', '.'], ['.', '.', '.'], ['.', '.', '.']];
+       let cells = document.getElementsByClassName('cell');
+       for (let i = 0; i < cells.length; i++) {
+           cells[i].innerText = '';
+           if (gameMode === 'evening') {
+               cells[i].style.backgroundColor = '#2a1b3d';
+               cells[i].style.borderColor = '#ff4081';
+           } else {
+               cells[i].style.backgroundColor = '#2a2a2a';
+               cells[i].style.borderColor = '#3d3d3d';
+           }
+       }
+       startNewRound();
+   }
+
+   function checkWin(sign) {
+       for (let i = 0; i < 3; i++) {
+           if (board[i][0] === sign && board[i][1] === sign && board[i][2] === sign) return true;
+           if (board[0][i] === sign && board[1][i] === sign && board[2][i] === sign) return true;
+       }
+       if (board[0][0] === sign && board[1][1] === sign && board[2][2] === sign) return true;
+       if (board[0][2] === sign && board[1][1] === sign && board[2][0] === sign) return true;
+       return false;
+   }
+
+   function createCoinRain() {
+       for (let i = 0; i < 40; i++) {
+           let coin = document.createElement('div');
+           coin.innerText = Math.random() > 0.5 ? '💰' : '🪙';
+           coin.style.position = 'fixed';
+           coin.style.left = Math.random() * 100 + 'vw';
+           coin.style.top = '-50px';
+           coin.style.fontSize = Math.random() * 20 + 20 + 'px';
+           coin.style.zIndex = '9999';
+           coin.style.transition = 'transform ' + (Math.random() * 2 + 1) + 's linear, opacity 1s';
+
+           document.body.appendChild(coin);
+
+           setTimeout(() => {
+               coin.style.transform = 'translateY(' + (window.innerHeight + 100) + 'px) rotate(' + (Math.random() * 360) + 'deg)';
+           }, 50);
+
+           setTimeout(() => coin.remove(), 3000);
+       }
+   }
+
+   startNewRound();
+
+   function changeLanguage(lang) {
+       if (!translations[lang]) return;
+       currentLang = lang;
+       const t = translations[currentLang];
+
+       // 1. Обновляем баланс
+       updateBalance();
+
+       // 2. Обновляем заголовок магазина
+       const shopTitleEl = document.querySelector('.shop-title');
+       if (shopTitleEl) shopTitleEl.innerText = t.shopTitle;
+
+       // 3. Обновляем кнопки в магазине со счётчиком рекламы
+       updateShopButtonsText();
+
+       // 4. Обновляем кнопки режимов и окно желаний
+       const btnDay = document.getElementById('btn-day');
+       if (btnDay && t.btnDay) btnDay.innerText = t.btnDay;
+
+       const btnEvening = document.getElementById('btn-evening');
+       if (btnEvening && t.btnEvening) btnEvening.innerText = t.btnEvening;
+
+       const wishTitle = document.getElementById('wish-modal-title');
+       if (wishTitle && t.wishTitle) wishTitle.innerText = t.wishTitle;
+
+       const wishSub = document.getElementById('wish-modal-subtitle');
+       if (wishSub && t.wishSubtitle) wishSub.innerText = t.wishSubtitle;
+
+       const wish1 = document.getElementById('wish-preset-1');
+       if (wish1 && t.wish1) wish1.innerText = t.wish1;
+
+       const wish2 = document.getElementById('wish-preset-2');
+       if (wish2 && t.wish2) wish2.innerText = t.wish2;
+
+       const wish3 = document.getElementById('wish-preset-3');
+       if (wish3 && t.wish3) wish3.innerText = t.wish3;
+
+       const wishInput = document.getElementById('custom-wish');
+       if (wishInput && t.wishPlaceholder) wishInput.placeholder = t.wishPlaceholder;
+
+       const btnConfirm = document.getElementById('btn-confirm-wish');
+       if (btnConfirm && t.wishConfirm) btnConfirm.innerText = t.wishConfirm;
+
+       const onTheLineEl = document.getElementById('on-the-line-label');
+       if (onTheLineEl && t.onTheLine) onTheLineEl.innerText = t.onTheLine;
+
+       // 5. Обновляем кнопку режима (Против ИИ / Вдвоем)
+       const modeBtnEl = document.getElementById('modeBtn');
+       if (modeBtnEl) {
+           if (isBotMode) {
+               modeBtnEl.innerText = t.modeAI;
+               modeBtnEl.style.backgroundColor = '#2e8b57';
+           } else {
+               const twoPlayersTranslations = {
+                   ru: "👥 Режим: Вдвоем",
+                   uk: "👥 Режим: Вдвох",
+                   en: "👥 Mode: Two Players",
+                   de: "👥 Modus: Zwei Spieler",
+                   zh: "👥 模式: 双人对战",
+                   chn: "👥 模式: 双人对战",
+                   ja: "👥 モード: 2人対戦",
+                   jpn: "👥 モード: 2人対戦",
+                   hi: "👥 मोड: दो खिलाड़ी",
+                   hin: "👥 मोड: दो खिलाड़ी"
+               };
+               modeBtnEl.innerText = twoPlayersTranslations[currentLang] || "👥 Режим: Вдвоем";
+               modeBtnEl.style.backgroundColor = '#ff4436';
+           }
+       }
+
+       // 6. Переводим строку самолёта на лету
+       const statusEl = document.getElementById('status');
+       if (statusEl && statusEl.innerText.trim() !== "") {
+           const match = statusEl.innerText.match(/\d+/);
+           if (match && !statusEl.innerText.includes(':')) {
+               statusEl.innerText = t.plane + match[0] + "!";
+           }
+       }
+   }
+
+   // Автоматическое определение языка при старте игры
+   document.addEventListener("DOMContentLoaded", () => {
+       const userLang = (navigator.language || navigator.userLanguage).substring(0, 2).toLowerCase();
+       const supportedLangs = ['ru', 'uk', 'en', 'de', 'zh', 'chn', 'ja', 'jpn', 'hi', 'hin'];
+
+       if (supportedLangs.includes(userLang)) {
+           changeLanguage(userLang);
+       } else {
+           changeLanguage('ru');
+       }
+   });
+

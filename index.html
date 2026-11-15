@@ -166,7 +166,8 @@
 
 <div class="container">
     <h1>MEGA-TICTACTOE $$$</h1>
-    <div id="balance">💰 Твой баланс: 3.37$</div>
+    <div id="balance">💰 Твой баланс: 0.00$</div>
+
     <button id="modeBtn" onclick="toggleGameMode()" style="padding: 10px 20px; font-size: 16px; margin-bottom: 15px; cursor: pointer; background-color: #2e8b57; color: white; border: none; border-radius: 5px; font-weight: bold;">🤖 Режим: Против ИИ</button>
     <div id="status">✈️ Самолёт летит...</div>
 
@@ -184,10 +185,29 @@
 
     <div class="shop-title">🛒 МАГАЗИН ДОП. ОПЦИЙ</div>
     <div class="shop-buttons">
-        <button id="shield-btn" class="shop-btn" onclick="buyShield()">🛡️ Щит (0.50$)</button>
-        <button id="scanner-btn" class="shop-btn" onclick="buyScanner()">🚩 Сканер (0.30$)</button>
+        <button id="shield-btn" class="shop-btn" onclick="watchAdForBonus('shield')">🛡️ Укрытие (0/3 🎬)</button>
+        <button id="scanner-btn" class="shop-btn" onclick="watchAdForBonus('scanner')">🚩 Сканер (0/1 🎬)</button>
+    </div>
+
+</div>
+<!-- Модальное окно рекламного баннера -->
+<div id="ad-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10001; align-items: center; justify-content: center;">
+    <div style="background: #1e1e1e; padding: 20px; border-radius: 15px; border: 2px solid #ffd700; width: 90%; max-width: 380px; text-align: center; box-sizing: border-box;">
+        <h3 id="ad-modal-title" style="color: #ffd700; margin-top: 0; font-size: 18px;">🎬 Рекламная пауза</h3>
+        <p id="ad-modal-desc" style="color: #ccc; font-size: 13px; margin-bottom: 12px;">Поддержите проект просмотром рекламы</p>
+
+        <!-- Ваш рекламный блок A-ADS внутри окна -->
+        <div style="margin: 10px auto; background: #121212; padding: 10px; border-radius: 8px; min-height: 100px; display: flex; align-items: center; justify-content: center;">
+            <iframe data-aa='2459627' src='//acceptable.a-ads.com/2459627/?size=Adaptive'
+                    style='border:0; padding:0; width:100%; height:auto; overflow:hidden; display:block; margin:auto;'></iframe>
+        </div>
+
+        <button id="ad-close-btn" onclick="closeAdModal()" disabled style="margin-top: 12px; background: #555; color: #aaa; border: none; padding: 10px 25px; font-size: 15px; border-radius: 8px; cursor: not-allowed; font-weight: bold;">
+            Закрыть через 5 сек...
+        </button>
     </div>
 </div>
+
 <script src="script.min.js" defer></script>
 
 <!-- BEGIN AADS AD UNIT 2459627 -->
